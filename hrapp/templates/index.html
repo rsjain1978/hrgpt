@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILHRGPT</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <header>
+        <h1>FILHRGPT</h1>
+    </header>
+    <div id="main-container">
+        <div id="left-panel">
+            <form id="upload-form">
+                <label for="pdf-upload">Choose Resumes</label>
+                <input type="file" id="pdf-upload" accept=".pdf">
+                <label for="job-descriptions">Choose Job Profile</label>
+                <select id="jobdescriptions">                
+                    <option value="Python Developer">Python Developer</option>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Data Scientist">Data Scientist</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <button type="submit">Analyse Resume</button>
+                                            
+            </form>
+            <div id="spinner" style="display:none;">
+                <div class="loader"></div>
+            </div>            
+            <div id="analysis-results" style="display:none;">
+                <div id="accordion">
+                    <!-- Accordion content will be added here -->
+                </div>
+            </div>
+        </div>
+        <div id="right-panel">
+            <iframe id="pdf-viewer" style="display:none;"></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 FIL (FILHRGPT). All rights reserved.</p>
+    </footer>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
